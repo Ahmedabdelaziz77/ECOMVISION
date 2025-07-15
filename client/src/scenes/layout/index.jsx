@@ -10,9 +10,9 @@ function Layout() {
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const userId = useSelector((state) => state.global.userId);
-  const { data } = useGetUserQuery(userId);
-  if (!data) return <p>Loading...</p>;
-  console.log("🚀 ~ Layout ~ data:", data);
+  const { data, isLoading } = useGetUserQuery(userId);
+  if (isLoading) return <p>Loading...</p>;
+
   return (
     <Box display={isNonMobile ? "flex" : "block"} width="100%" height="100%">
       <Sidebar
