@@ -10,6 +10,9 @@ import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
+// Data Imports
+import User from "./models/user.js";
+import { dataUser } from "./data/index.js";
 // CONFIGURATION
 dotenv.config();
 const app = express();
@@ -21,6 +24,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 // ROUTES
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.originalUrl}`);
+  next();
+});
+
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
@@ -34,6 +42,7 @@ mongoose
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
+    // User.insertMany(dataUser);
   })
   .catch((error) => {
     console.error("Error connecting to MongoDB:", error);
