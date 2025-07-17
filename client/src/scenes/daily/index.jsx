@@ -28,7 +28,7 @@ function Daily({ isDashboard }) {
       data: [],
     };
 
-    dailyData.forEach(({ date, totalSale, totalUnits }) => {
+    dailyData.forEach(({ date, totalSales, totalUnits }) => {
       if (!date) return;
 
       const dateFormatted = new Date(date);
@@ -36,7 +36,7 @@ function Daily({ isDashboard }) {
 
       if (dateFormatted >= startDate && dateFormatted <= endDate) {
         const splitDate = date.substring(date.indexOf("-") + 1); // "MM-DD"
-        const sale = Number(totalSale) || 0;
+        const sale = Number(totalSales) || 0;
         const units = Number(totalUnits) || 0;
 
         totalSalesLine.data.push({ x: splitDate, y: sale });
