@@ -76,6 +76,7 @@ function OverviewChart({ isDashboard = false, view }) {
         stacked: false,
         reverse: false,
       }}
+      enableArea={isDashboard}
       curve="catmullRom"
       axisBottom={{
         legend: isDashboard ? "" : "Month",
@@ -91,6 +92,7 @@ function OverviewChart({ isDashboard = false, view }) {
           ? ""
           : `Total ${view === "sales" ? "Revenue" : "Units"}`,
         legendOffset: -60,
+        tickValues: 5,
       }}
       enableGridX={false}
       enableGridY={false}
