@@ -55,12 +55,12 @@ mongoose
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
-    // User.insertMany(dataUser);
-    // Product.insertMany(dataProduct);
-    // ProductStat.insertMany(dataProductStat);
-    // Transaction.insertMany(dataTransaction);
-    // OverallStat.insertMany(dataOverallStat);
-    // AffiliateStat.insertMany(dataAffiliateStat);
+    User.insertMany(dataUser);
+    Product.insertMany(dataProduct);
+    ProductStat.insertMany(dataProductStat);
+    Transaction.insertMany(dataTransaction);
+    OverallStat.insertMany(dataOverallStat);
+    AffiliateStat.insertMany(dataAffiliateStat);
   })
   .catch((error) => {
     console.error("Error connecting to MongoDB:", error);

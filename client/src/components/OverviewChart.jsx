@@ -1,4 +1,4 @@
-import { Box, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 import { useMemo } from "react";
 import { useGetSalesQuery } from "state/api";
 import { ResponsiveLine } from "@nivo/line";
