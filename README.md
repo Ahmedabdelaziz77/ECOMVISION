@@ -12,6 +12,17 @@ A full-stack modern admin dashboard built using the MERN stack, featuring intera
 ### 🌕 Dashboard – Light Mode  
 ![Dashboard Light Mode](https://github.com/user-attachments/assets/7d89e3a7-8d30-4cc1-b7e4-43d9ebf8ac7b)
 
+### 🌍 Geographic User Distribution  
+Displays an interactive map of where users are located.  
+![Geography Page](https://github.com/user-attachments/assets/baacbcbb-12f6-4df6-bf5c-e82e3fcf9525)
+
+### 📅 Daily Sales Overview  
+Shows total sales and units sold per day.  
+![Daily Sales Chart](https://github.com/user-attachments/assets/644a3eca-966d-45e8-9076-f71bf4619168)
+### 📆 Monthly Sales Overview  
+Breakdown of total sales and units sold each month.  
+![Monthly Sales Chart](https://github.com/user-attachments/assets/0c1a6c5f-a449-46b8-813b-3bd1f12f0c68)
+
 ---
 
 ## 🔧 Tech Stack
